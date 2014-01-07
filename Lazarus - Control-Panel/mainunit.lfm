@@ -1,0 +1,1135 @@
+object MainForm: TMainForm
+  Left = 654
+  Height = 720
+  Top = 184
+  Width = 584
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  BorderWidth = 4
+  Caption = 'Roving Dynamics Ltd (rodyne.com) - Fill Level Sensor Control Panel'
+  ClientHeight = 720
+  ClientWidth = 584
+  Constraints.MaxWidth = 584
+  Constraints.MinHeight = 720
+  Constraints.MinWidth = 584
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.0.14.0'
+  object Panel1: TPanel
+    Left = 4
+    Height = 30
+    Top = 4
+    Width = 576
+    Align = alTop
+    BorderWidth = 3
+    ClientHeight = 30
+    ClientWidth = 576
+    TabOrder = 0
+    object Panel22: TPanel
+      Left = 4
+      Height = 22
+      Top = 4
+      Width = 106
+      Align = alLeft
+      Caption = 'Fill Sensor Control'
+      TabOrder = 0
+    end
+    object Label1: TLabel
+      Left = 110
+      Height = 22
+      Top = 4
+      Width = 14
+      Align = alLeft
+      AutoSize = False
+      ParentColor = False
+    end
+    object ResetSensor: TButton
+      Left = 485
+      Height = 22
+      Top = 4
+      Width = 87
+      Align = alRight
+      Caption = 'Reset Sensor'
+      OnClick = ResetSensorClick
+      TabOrder = 1
+    end
+    object NoResponse: TLabel
+      Left = 143
+      Height = 22
+      Top = 4
+      Width = 149
+      Align = alRight
+      Caption = '-No Response From Sensor-'
+      Color = clFuchsia
+      Layout = tlCenter
+      ParentColor = False
+      Transparent = False
+      Visible = False
+    end
+    object Status: TLabel
+      Left = 429
+      Height = 22
+      Top = 4
+      Width = 33
+      Align = alRight
+      Caption = 'Status'
+      Color = clMoneyGreen
+      Layout = tlCenter
+      ParentColor = False
+      Transparent = False
+      Visible = False
+    end
+    object CommErr: TLabel
+      Left = 292
+      Height = 22
+      Top = 4
+      Width = 137
+      Align = alRight
+      Caption = '-Communications Down-'
+      Color = clRed
+      Layout = tlCenter
+      ParentColor = False
+      Transparent = False
+      Visible = False
+    end
+    object Panel28: TPanel
+      Left = 462
+      Height = 22
+      Top = 4
+      Width = 23
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 2
+    end
+  end
+  object Panel3: TPanel
+    Left = 4
+    Height = 682
+    Top = 34
+    Width = 576
+    Align = alClient
+    BorderWidth = 4
+    ClientHeight = 682
+    ClientWidth = 576
+    TabOrder = 1
+    object PageControl1: TPageControl
+      Left = 5
+      Height = 672
+      Top = 5
+      Width = 566
+      ActivePage = TabSheet2
+      Align = alClient
+      TabIndex = 1
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        Caption = 'Real-Time Data'
+        ClientHeight = 644
+        ClientWidth = 558
+        object Panel2: TPanel
+          Left = 0
+          Height = 644
+          Top = 0
+          Width = 558
+          Align = alClient
+          ClientHeight = 644
+          ClientWidth = 558
+          TabOrder = 0
+          object OffLinePanel: TPanel
+            Left = 1
+            Height = 98
+            Top = 1
+            Width = 556
+            Align = alTop
+            AutoSize = True
+            BorderWidth = 3
+            ClientHeight = 98
+            ClientWidth = 556
+            TabOrder = 0
+            object Panel21: TPanel
+              Left = 4
+              Height = 30
+              Top = 4
+              Width = 548
+              Align = alTop
+              BevelOuter = bvNone
+              BorderWidth = 3
+              ClientHeight = 30
+              ClientWidth = 548
+              TabOrder = 0
+              object Label19: TLabel
+                Left = 3
+                Height = 24
+                Top = 3
+                Width = 99
+                Align = alLeft
+                AutoSize = False
+                Caption = 'Bottle Count'
+                Layout = tlCenter
+                ParentColor = False
+              end
+              object BottleCount: TPanel
+                Left = 102
+                Height = 24
+                Top = 3
+                Width = 120
+                Align = alLeft
+                BevelOuter = bvLowered
+                Caption = '0'
+                Color = clMoneyGreen
+                ParentColor = False
+                TabOrder = 0
+              end
+              object Label22: TLabel
+                Left = 334
+                Height = 24
+                Top = 3
+                Width = 91
+                Align = alRight
+                AutoSize = False
+                Caption = 'Exposure'
+                Layout = tlCenter
+                ParentColor = False
+              end
+              object Exposure: TPanel
+                Left = 425
+                Height = 24
+                Top = 3
+                Width = 120
+                Align = alRight
+                BevelOuter = bvLowered
+                Color = clSkyBlue
+                ParentColor = False
+                TabOrder = 1
+              end
+            end
+            object Panel24: TPanel
+              Left = 4
+              Height = 30
+              Top = 64
+              Width = 548
+              Align = alTop
+              BevelOuter = bvNone
+              BorderWidth = 3
+              ClientHeight = 30
+              ClientWidth = 548
+              TabOrder = 1
+              object Info: TLabel
+                Left = 3
+                Height = 24
+                Top = 3
+                Width = 510
+                Align = alClient
+                Caption = 'Info'
+                Font.Color = clGray
+                Layout = tlCenter
+                ParentColor = False
+                ParentFont = False
+              end
+              object floppy: TImage
+                Left = 513
+                Height = 24
+                Top = 3
+                Width = 16
+                Align = alRight
+                AutoSize = True
+                Center = True
+                Picture.Data = {
+                  07544269746D617036030000424D380300000000000036000000280000001000
+                  000010000000010018000000000000000000120B0000120B0000000000000000
+                  0000FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+                  FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF97433F97433FB59A
+                  9BB59A9BB59A9BB59A9BB59A9BB59A9BB59A9B93303097433FFF00FFFF00FFFF
+                  00FFFF00FF97433FD66868C66060E5DEDF92292A92292AE4E7E7E0E3E6D9DFE0
+                  CCC9CC8F201FAF464697433FFF00FFFF00FFFF00FF97433FD06566C25F5FE9E2
+                  E292292A92292AE2E1E3E2E6E8DDE2E4CFCCCF8F2222AD464697433FFF00FFFF
+                  00FFFF00FF97433FD06565C15D5DECE4E492292A92292ADFDDDFE1E6E8E0E5E7
+                  D3D0D28A1E1EAB444497433FFF00FFFF00FFFF00FF97433FD06565C15B5CEFE6
+                  E6EDE5E5E5DEDFE0DDDFDFE0E2E0E1E3D6D0D2962A2AB24A4A97433FFF00FFFF
+                  00FFFF00FF97433FCD6263C86060C96767CC7272CA7271C66969C46464CC6D6C
+                  CA6667C55D5DCD656597433FFF00FFFF00FFFF00FF97433FB65553C27B78D39D
+                  9CD7A7A5D8A7A6D8A6A5D7A09FD5A09FD7A9A7D8ABABCC666797433FFF00FFFF
+                  00FFFF00FF97433FCC6667F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9
+                  F9F9F9F9F9F9CC666797433FFF00FFFF00FFFF00FF97433FCC6667F9F9F9F9F9
+                  F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9CC666797433FFF00FFFF
+                  00FFFF00FF97433FCC6667F9F9F9CDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCD
+                  CDCDCDF9F9F9CC666797433FFF00FFFF00FFFF00FF97433FCC6667F9F9F9F9F9
+                  F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9CC666797433FFF00FFFF
+                  00FFFF00FF97433FCC6667F9F9F9CDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCD
+                  CDCDCDF9F9F9CC666797433FFF00FFFF00FFFF00FF97433FCC6667F9F9F9F9F9
+                  F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9CC666797433FFF00FFFF
+                  00FFFF00FFFF00FF97433FF9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9F9
+                  F9F9F9F9F9F997433FFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+                  FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+                  00FF
+                }
+                Transparent = True
+                Visible = False
+              end
+              object comms: TImage
+                Left = 529
+                Height = 24
+                Top = 3
+                Width = 16
+                Align = alRight
+                AutoSize = True
+                Center = True
+                Picture.Data = {
+                  1754506F727461626C654E6574776F726B477261706869639003000089504E47
+                  0D0A1A0A0000000D49484452000000100000001008060000001FF3FF61000000
+                  0473424954080808087C0864880000001974455874536F667477617265007777
+                  772E696E6B73636170652E6F72679BEE3C1A0000032249444154388D6D524D6C
+                  5465143DF77BEF95F9AD336D075BA8B60A8612A6A1A2338D7FD1984637C46058
+                  A8BC448C9081F0B361071B0C4D0C117461A2E003A3314C2598340137FC042192
+                  D4C2AB71D1D092D4D2C601463BB41DE8CCB4F3DEFBBEEBA2F3925970929BDCC5
+                  3D2727E75C6266F84865B2CF34E8DA1110DEF4A46AD5849827C2B8E3CA13002E
+                  D896E9D6DD1E0470827C817426BB45D3C4404FD72A7D5D67B3D1D61401985128
+                  56303276BF7C67FAA12715EFB62DF36C7A5736C38CEF00C4889991CA64D71BBA
+                  18D9DAD71D8AC782D089D01C0D201CD0110D19081A0233C5451CCF0E570AC58A
+                  1D0D35F43E2E570D66341133E3D53D674FF5AC6BFB341830C4ADD11CAAAE0743
+                  D7E49AD5B1C5BEF4F3E1DEF5ADA4098210845FAE4DA8B75E6C1707BEBEEA38AE
+                  6CD10180993FBC335D10AEA758312F32E333C79567C6A7679313F7E68F5EEF68
+                  EEDAB7755328110BE1E377BB442D0602A0040048A9C255C7F3922F3CFB8394EA
+                  118041DB32F3B6655EF9E3DB8F5E1A9D2CECDD7DEC12EE3F2C617AA60CA91800
+                  03000B2CAFAAE9A9487F6324F05567FBCA6E00537569EBBA26766E7B27E9763E
+                  1D45A271053441BE03D66B77F15F3FDFBC8027E3B427D56B178727AB57EDA925
+                  DFBCE3AA0000F65BA802306A04AE9BDF00EC04E03E4158B72DF39E2FE09D3FFA
+                  BE0610981917ED7FD4A9F37FE5A4543DB66516EB5987B363AB4AE5A58EDF47C6
+                  6F0088E90040041011EEFE578621182707FF24005FD49353996C9888EEF66E5C
+                  7B263F339702A001A80A00104404001D891056B784F1E5FEB7A9AD2572EC953D
+                  3FDF4A65B2E99AC6F61586AEE7F2B307F285E2EB9A46AE6D99AE587640785C71
+                  7161688A3D8FD1BE328AC33BDE087DD0977CB9B539722DBD6BC03574F18D5432
+                  3EF768014D8D41D284180400FF91A8FFC7A1A589DCDCE4A5E1C9CECC964DE144
+                  2C88EEB5097AAE3D1E2A965DFC3B5B82E37814091A387779B4E249750400961F
+                  49314DE4E64EDF3CB92DF9A0B0F049FFF737E68F0FDC2C0DDFCE233F5B46D595
+                  104428CC97E4B9CBA38B52A98C6D996300E0B7F01380EDB665722D3003C07B0D
+                  86B657316F9052C50D5D9B21C250D591876CCBFCDB0FF77F2E55766A1365CCC6
+                  0000000049454E44AE426082
+                }
+                Transparent = True
+                Visible = False
+              end
+            end
+            object Panel26: TPanel
+              Left = 4
+              Height = 30
+              Top = 34
+              Width = 548
+              Align = alTop
+              BevelOuter = bvNone
+              BorderWidth = 3
+              ClientHeight = 30
+              ClientWidth = 548
+              TabOrder = 2
+              object Label21: TLabel
+                Left = 3
+                Height = 24
+                Top = 3
+                Width = 99
+                Align = alLeft
+                AutoSize = False
+                Caption = 'Reject Count'
+                Layout = tlCenter
+                ParentColor = False
+              end
+              object RejectCount: TPanel
+                Left = 102
+                Height = 24
+                Top = 3
+                Width = 120
+                Align = alLeft
+                BevelOuter = bvLowered
+                Caption = '0'
+                Color = clYellow
+                ParentColor = False
+                TabOrder = 0
+              end
+              object AvgDetFill: TPanel
+                Left = 425
+                Height = 24
+                Top = 3
+                Width = 120
+                Align = alRight
+                BevelOuter = bvLowered
+                Color = clSkyBlue
+                ParentColor = False
+                TabOrder = 1
+              end
+              object Label20: TLabel
+                Left = 270
+                Height = 24
+                Top = 3
+                Width = 155
+                Align = alRight
+                AutoSize = False
+                Caption = 'Average Detected Fill Level  '
+                Layout = tlCenter
+                ParentColor = False
+              end
+            end
+          end
+          object Panel19: TPanel
+            Left = 1
+            Height = 544
+            Top = 99
+            Width = 556
+            Align = alClient
+            BevelOuter = bvNone
+            BorderWidth = 16
+            ClientHeight = 544
+            ClientWidth = 556
+            TabOrder = 1
+            object p1: TPaintBox
+              Left = 16
+              Height = 512
+              Top = 16
+              Width = 512
+              Align = alTop
+              Constraints.MaxHeight = 512
+              Constraints.MaxWidth = 512
+              Constraints.MinHeight = 512
+              Constraints.MinWidth = 512
+              OnMouseMove = p1MouseMove
+              OnMouseLeave = p2MouseLeave
+              OnPaint = p1Paint
+            end
+          end
+        end
+      end
+      object TabSheet2: TTabSheet
+        BorderWidth = 8
+        Caption = 'Change System Variables'
+        ClientHeight = 644
+        ClientWidth = 558
+        object Panel4: TPanel
+          Left = 0
+          Height = 30
+          Top = 49
+          Width = 558
+          Align = alTop
+          BevelOuter = bvNone
+          BorderWidth = 3
+          ClientHeight = 30
+          ClientWidth = 558
+          TabOrder = 0
+          object Label2: TLabel
+            Left = 3
+            Height = 24
+            Top = 3
+            Width = 124
+            Align = alLeft
+            Caption = 'Bluetooth  Serial  Port   '
+            Layout = tlCenter
+            ParentColor = False
+          end
+          object COMPort: TComboBox
+            Left = 127
+            Height = 23
+            Top = 3
+            Width = 70
+            Align = alLeft
+            ItemHeight = 15
+            ItemIndex = 5
+            Items.Strings = (
+              'COM1'
+              'COM2'
+              'COM3'
+              'COM4'
+              'COM5'
+              'COM6'
+              'COM7'
+              'COM8'
+              'COM9'
+              'COM10'
+              'COM11'
+              'COM12'
+              'COM13'
+              'COM14'
+              'COM15'
+              'COM16'
+              'COM17'
+              'COM18'
+              'COM19'
+              'COM20'
+              'COM1'
+              'COM1'
+              'COM1'
+              'COM1'
+            )
+            Style = csDropDownList
+            TabOrder = 0
+            Text = 'COM6'
+          end
+          object Label3: TLabel
+            Left = 197
+            Height = 24
+            Top = 3
+            Width = 78
+            Align = alLeft
+            Caption = '      Baud Rate  '
+            Layout = tlCenter
+            ParentColor = False
+          end
+          object BaudRate: TComboBox
+            Left = 275
+            Height = 23
+            Top = 3
+            Width = 70
+            Align = alLeft
+            ItemHeight = 15
+            ItemIndex = 3
+            Items.Strings = (
+              '9600'
+              '19200'
+              '57600'
+              '115200'
+              '230400'
+            )
+            Style = csDropDownList
+            TabOrder = 1
+            Text = '115200'
+          end
+          object SetComms: TButton
+            Left = 365
+            Height = 24
+            Top = 3
+            Width = 32
+            Align = alLeft
+            Caption = 'Set'
+            OnClick = SetCommsClick
+            TabOrder = 2
+          end
+          object Label18: TLabel
+            Left = 345
+            Height = 24
+            Top = 3
+            Width = 20
+            Align = alLeft
+            AutoSize = False
+            Layout = tlCenter
+            ParentColor = False
+          end
+        end
+        object Panel5: TPanel
+          Left = 0
+          Height = 49
+          Top = 0
+          Width = 558
+          Align = alTop
+          BevelOuter = bvNone
+          BorderWidth = 3
+          ClientHeight = 49
+          ClientWidth = 558
+          TabOrder = 1
+          object Label4: TLabel
+            Left = 3
+            Height = 43
+            Top = 3
+            Width = 91
+            Align = alLeft
+            Caption = 'Serial Parameters'
+            Font.Style = [fsUnderline]
+            Layout = tlCenter
+            ParentColor = False
+            ParentFont = False
+          end
+        end
+        object Panel6: TPanel
+          Left = 0
+          Height = 46
+          Top = 79
+          Width = 558
+          Align = alTop
+          BevelOuter = bvNone
+          BorderWidth = 3
+          ClientHeight = 46
+          ClientWidth = 558
+          TabOrder = 2
+          object Label5: TLabel
+            Left = 3
+            Height = 40
+            Top = 3
+            Width = 69
+            Align = alLeft
+            Caption = 'Capture Files'
+            Font.Style = [fsUnderline]
+            Layout = tlCenter
+            ParentColor = False
+            ParentFont = False
+          end
+        end
+        object Panel7: TPanel
+          Left = 0
+          Height = 30
+          Top = 125
+          Width = 558
+          Align = alTop
+          BevelOuter = bvNone
+          BorderWidth = 3
+          ClientHeight = 30
+          ClientWidth = 558
+          TabOrder = 3
+          object Label6: TLabel
+            Left = 3
+            Height = 24
+            Top = 3
+            Width = 126
+            Align = alLeft
+            Caption = 'Default  Data Directory  '
+            Layout = tlCenter
+            ParentColor = False
+          end
+          object DataDir: TEdit
+            Left = 129
+            Height = 24
+            Top = 3
+            Width = 378
+            Align = alLeft
+            TabOrder = 0
+            Text = 'DataDir'
+          end
+          object SetWorkingDir: TButton
+            Left = 507
+            Height = 24
+            Top = 3
+            Width = 32
+            Align = alLeft
+            Caption = 'Set'
+            OnClick = SetWorkingDirClick
+            TabOrder = 1
+          end
+        end
+        object Panel8: TPanel
+          Left = 0
+          Height = 27
+          Top = 233
+          Width = 558
+          Align = alTop
+          BevelOuter = bvNone
+          BorderWidth = 3
+          ClientHeight = 27
+          ClientWidth = 558
+          Color = clBtnFace
+          ParentColor = False
+          TabOrder = 4
+          object Label7: TLabel
+            Left = 3
+            Height = 21
+            Top = 3
+            Width = 147
+            Align = alLeft
+            Caption = 'Sensor Control and Settings'
+            Font.Style = [fsUnderline]
+            Layout = tlBottom
+            ParentColor = False
+            ParentFont = False
+          end
+        end
+        object Panel9: TPanel
+          Left = 0
+          Height = 384
+          Top = 260
+          Width = 558
+          Align = alClient
+          BevelOuter = bvNone
+          BorderWidth = 16
+          ClientHeight = 384
+          ClientWidth = 558
+          Color = clBtnFace
+          ParentColor = False
+          TabOrder = 5
+          object Panel11: TPanel
+            Left = 16
+            Height = 30
+            Top = 256
+            Width = 526
+            Align = alTop
+            BevelOuter = bvNone
+            BorderWidth = 3
+            ClientHeight = 30
+            ClientWidth = 526
+            TabOrder = 0
+            object Label9: TLabel
+              Left = 3
+              Height = 24
+              Top = 3
+              Width = 126
+              Align = alLeft
+              AutoSize = False
+              Caption = 'Tollerance'
+              Layout = tlCenter
+              ParentColor = False
+            end
+            object Tollerance: TEdit
+              Left = 129
+              Height = 24
+              Top = 3
+              Width = 106
+              Align = alLeft
+              OnChange = TMinChange
+              TabOrder = 0
+              Text = 'Tollerance'
+            end
+          end
+          object Panel12: TPanel
+            Left = 16
+            Height = 30
+            Top = 226
+            Width = 526
+            Align = alTop
+            BevelOuter = bvNone
+            BorderWidth = 3
+            ClientHeight = 30
+            ClientWidth = 526
+            TabOrder = 1
+            object Label10: TLabel
+              Left = 3
+              Height = 24
+              Top = 3
+              Width = 126
+              Align = alLeft
+              AutoSize = False
+              Caption = 'Reject On Time'
+              Layout = tlCenter
+              ParentColor = False
+            end
+            object RejOnTime: TEdit
+              Left = 129
+              Height = 24
+              Top = 3
+              Width = 106
+              Align = alLeft
+              OnChange = TMinChange
+              TabOrder = 0
+              Text = 'RejOnTime'
+            end
+          end
+          object Panel13: TPanel
+            Left = 16
+            Height = 30
+            Top = 196
+            Width = 526
+            Align = alTop
+            BevelOuter = bvNone
+            BorderWidth = 3
+            ClientHeight = 30
+            ClientWidth = 526
+            TabOrder = 2
+            object Label11: TLabel
+              Left = 3
+              Height = 24
+              Top = 3
+              Width = 126
+              Align = alLeft
+              AutoSize = False
+              Caption = 'SampleRate'
+              Layout = tlCenter
+              ParentColor = False
+            end
+            object SampleRate: TEdit
+              Left = 129
+              Height = 24
+              Top = 3
+              Width = 106
+              Align = alLeft
+              OnChange = TMinChange
+              TabOrder = 0
+              Text = 'SampleRate'
+            end
+          end
+          object Panel14: TPanel
+            Left = 16
+            Height = 30
+            Top = 166
+            Width = 526
+            Align = alTop
+            BevelOuter = bvNone
+            BorderWidth = 3
+            ClientHeight = 30
+            ClientWidth = 526
+            TabOrder = 3
+            object Label12: TLabel
+              Left = 3
+              Height = 24
+              Top = 3
+              Width = 126
+              Align = alLeft
+              AutoSize = False
+              Caption = 'Neck'
+              Layout = tlCenter
+              ParentColor = False
+            end
+            object Neck: TEdit
+              Left = 129
+              Height = 24
+              Top = 3
+              Width = 106
+              Align = alLeft
+              OnChange = TMinChange
+              TabOrder = 0
+              Text = 'Neck'
+            end
+          end
+          object Panel15: TPanel
+            Left = 16
+            Height = 30
+            Top = 136
+            Width = 526
+            Align = alTop
+            BevelOuter = bvNone
+            BorderWidth = 3
+            ClientHeight = 30
+            ClientWidth = 526
+            TabOrder = 4
+            object Label13: TLabel
+              Left = 3
+              Height = 24
+              Top = 3
+              Width = 126
+              Align = alLeft
+              AutoSize = False
+              Caption = 'Cap'
+              Layout = tlCenter
+              ParentColor = False
+            end
+            object Cap: TEdit
+              Left = 129
+              Height = 24
+              Top = 3
+              Width = 106
+              Align = alLeft
+              OnChange = TMinChange
+              TabOrder = 0
+              Text = 'Cap'
+            end
+          end
+          object Panel16: TPanel
+            Left = 16
+            Height = 30
+            Top = 106
+            Width = 526
+            Align = alTop
+            BevelOuter = bvNone
+            BorderWidth = 3
+            ClientHeight = 30
+            ClientWidth = 526
+            TabOrder = 5
+            object Label14: TLabel
+              Left = 3
+              Height = 24
+              Top = 3
+              Width = 126
+              Align = alLeft
+              AutoSize = False
+              Caption = 'Algorithm'
+              Layout = tlCenter
+              ParentColor = False
+            end
+            object Algorithm: TEdit
+              Left = 129
+              Height = 24
+              Top = 3
+              Width = 106
+              Align = alLeft
+              OnChange = TMinChange
+              TabOrder = 0
+              Text = 'Algorithm'
+            end
+          end
+          object Panel17: TPanel
+            Left = 16
+            Height = 30
+            Top = 76
+            Width = 526
+            Align = alTop
+            BevelOuter = bvNone
+            BorderWidth = 3
+            ClientHeight = 30
+            ClientWidth = 526
+            TabOrder = 6
+            object Label15: TLabel
+              Left = 3
+              Height = 24
+              Top = 3
+              Width = 126
+              Align = alLeft
+              AutoSize = False
+              Caption = 'Tmin'
+              Layout = tlCenter
+              ParentColor = False
+            end
+            object TMin: TEdit
+              Left = 129
+              Height = 24
+              Top = 3
+              Width = 106
+              Align = alLeft
+              OnChange = TMinChange
+              TabOrder = 0
+              Text = 'Tmin'
+            end
+          end
+          object Panel18: TPanel
+            Left = 16
+            Height = 30
+            Top = 46
+            Width = 526
+            Align = alTop
+            BevelOuter = bvNone
+            BorderWidth = 3
+            ClientHeight = 30
+            ClientWidth = 526
+            TabOrder = 7
+            object Label16: TLabel
+              Left = 3
+              Height = 24
+              Top = 3
+              Width = 43
+              Align = alLeft
+              Caption = 'Settings'
+              Font.Style = [fsUnderline]
+              Layout = tlCenter
+              ParentColor = False
+              ParentFont = False
+            end
+          end
+          object SavePanel: TPanel
+            Left = 16
+            Height = 30
+            Top = 286
+            Width = 526
+            Align = alTop
+            BevelOuter = bvNone
+            BorderWidth = 3
+            ClientHeight = 30
+            ClientWidth = 526
+            TabOrder = 8
+            Visible = False
+            object Label17: TLabel
+              Left = 3
+              Height = 24
+              Top = 3
+              Width = 126
+              Align = alLeft
+              AutoSize = False
+              Layout = tlCenter
+              ParentColor = False
+            end
+            object SaveTemp: TButton
+              Left = 129
+              Height = 24
+              Top = 3
+              Width = 170
+              Align = alLeft
+              Caption = 'Save Temporary (Until Reset)'
+              Enabled = False
+              OnClick = SaveTempClick
+              TabOrder = 0
+            end
+            object SaveNVM: TButton
+              Left = 299
+              Height = 24
+              Top = 3
+              Width = 170
+              Align = alLeft
+              Caption = 'Save Permanently to NVM'
+              Enabled = False
+              OnClick = SaveTempClick
+              TabOrder = 1
+            end
+          end
+          object Panel27: TPanel
+            Left = 16
+            Height = 30
+            Top = 16
+            Width = 526
+            Align = alTop
+            BevelOuter = bvNone
+            BorderWidth = 3
+            ClientHeight = 30
+            ClientWidth = 526
+            ParentColor = False
+            TabOrder = 9
+            object Run4: TButton
+              Left = 312
+              Height = 24
+              Top = 3
+              Width = 40
+              Align = alLeft
+              Caption = 'STOP!'
+              OnClick = Run4Click
+              TabOrder = 0
+            end
+            object Run3: TButton
+              Left = 179
+              Height = 24
+              Top = 3
+              Width = 133
+              Align = alLeft
+              Caption = 'Raw Image Calibration'
+              OnClick = Run3Click
+              TabOrder = 1
+            end
+            object Label24: TLabel
+              Left = 3
+              Height = 24
+              Top = 3
+              Width = 126
+              Align = alLeft
+              AutoSize = False
+              Caption = 'Run Mode'
+              Layout = tlCenter
+              ParentColor = False
+            end
+            object Run1: TButton
+              Left = 129
+              Height = 24
+              Top = 3
+              Width = 50
+              Align = alLeft
+              Caption = 'Run'
+              OnClick = Run1Click
+              TabOrder = 2
+            end
+          end
+        end
+        object Panel20: TPanel
+          Left = 0
+          Height = 30
+          Top = 155
+          Width = 558
+          Align = alTop
+          BevelOuter = bvNone
+          BorderWidth = 3
+          ClientHeight = 30
+          ClientWidth = 558
+          TabOrder = 6
+          object Label8: TLabel
+            Left = 3
+            Height = 24
+            Top = 3
+            Width = 124
+            Align = alLeft
+            AutoSize = False
+            Layout = tlCenter
+            ParentColor = False
+          end
+          object log0: TRadioButton
+            Left = 127
+            Height = 24
+            Top = 3
+            Width = 105
+            Align = alLeft
+            Caption = 'Log Nothing      '
+            OnChange = SetWorkingDirClick
+            TabOrder = 2
+          end
+          object Log2: TRadioButton
+            Left = 358
+            Height = 24
+            Top = 3
+            Width = 108
+            Align = alLeft
+            Caption = 'Log Rejects Only'
+            Checked = True
+            OnChange = SetWorkingDirClick
+            TabOrder = 0
+            TabStop = True
+          end
+          object Log1: TRadioButton
+            Left = 232
+            Height = 24
+            Top = 3
+            Width = 126
+            Align = alLeft
+            Caption = 'Log Everything         '
+            OnChange = SetWorkingDirClick
+            TabOrder = 1
+          end
+        end
+        object Panel10: TPanel
+          Left = 0
+          Height = 18
+          Top = 215
+          Width = 558
+          Align = alTop
+          BevelOuter = bvNone
+          BorderWidth = 3
+          TabOrder = 7
+        end
+        object Panel25: TPanel
+          Left = 0
+          Height = 30
+          Top = 185
+          Width = 558
+          Align = alTop
+          BevelOuter = bvNone
+          BorderWidth = 3
+          ClientHeight = 30
+          ClientWidth = 558
+          TabOrder = 8
+          object Label23: TLabel
+            Left = 3
+            Height = 24
+            Top = 3
+            Width = 124
+            Align = alLeft
+            AutoSize = False
+            Caption = 'File Name'
+            Layout = tlCenter
+            ParentColor = False
+          end
+          object CaptureFileName: TLabel
+            Left = 127
+            Height = 24
+            Top = 3
+            Width = 428
+            Align = alClient
+            AutoSize = False
+            Layout = tlCenter
+            ParentColor = False
+            OnClick = CaptureFileNameClick
+          end
+        end
+      end
+      object TabSheet3: TTabSheet
+        Caption = 'Log'
+        ClientHeight = 644
+        ClientWidth = 558
+        object log: TMemo
+          Left = 0
+          Height = 644
+          Top = 0
+          Width = 558
+          Align = alClient
+          Color = clBtnFace
+          Font.Color = clGray
+          Font.Height = -11
+          Lines.Strings = (
+            'log'
+          )
+          ParentFont = False
+          ReadOnly = True
+          ScrollBars = ssAutoVertical
+          TabOrder = 0
+        end
+      end
+    end
+    object info2: TLabel
+      Left = 524
+      Height = 16
+      Top = 9
+      Width = 28
+      Alignment = taRightJustify
+      Caption = 'info2'
+      ParentColor = False
+    end
+  end
+  object Timer1: TTimer
+    Interval = 50
+    OnTimer = Timer1Timer
+    left = 384
+    top = 416
+  end
+end
